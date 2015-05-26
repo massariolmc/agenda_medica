@@ -1,0 +1,132 @@
+
+/*especifica o corpo da pagina */
+body{ 
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ background-color: gray;
+ font: 12pt "Arial";
+}
+#rel_todos_os_atendimentos {
+        width: 210mm;
+        height: 297mm;
+        padding: 20mm;
+        margin: 10mm auto;      
+        border: 3px #D3D3D3 solid;
+        border-radius: 5px;
+        background: greenyellow;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+#foto{
+ height: 23mm;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/ 
+  border: 3px red solid;
+}
+
+#dir_foto{
+background: url(../img/bacg) no-repeat;  
+background-size:100% 100%;
+-webkit-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+-khtml-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+ overflow: auto; /* Paul O Brien Fix for IE www.pmob.co.uk */
+ width: 68px;
+ height: 79px;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/
+ border: 3px red solid;
+ float:right;
+ margin-left:0px;
+ 
+}
+
+#esq_foto{
+background: url(../img/ES1) no-repeat;  
+background-size:100% 100%;
+-webkit-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+-khtml-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+ overflow: auto; /* Paul O Brien Fix for IE www.pmob.co.uk */
+ width: 68px;
+ height: 79px;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/
+ border: 3px red solid;
+ float:left;
+
+}
+#centro_foto{
+background: url(../img/brasao) no-repeat;  
+background-size:100% 100%;
+-webkit-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+-khtml-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+ overflow: auto; /* Paul O Brien Fix for IE www.pmob.co.uk */
+ width: 75px;
+ height: 79px;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/
+ border: 3px red solid;
+ float:left;
+ margin-left:280px;
+ 
+}
+
+#cabeçalho{
+  height: 33mm;  
+  border: 3px red solid;
+  
+}
+#cabeçalho h1{
+color:black;
+text-align: center;
+font:14px "Arial";
+border: 3px black solid;
+width:230px;
+margin-left:275px;
+margin-top:0px;
+}
+#cabeçalho em{
+    font:bold 14px "Arial";
+}
+#cabeçalho p{
+font:14px "Arial";
+color:black;
+text-align: center;
+border: 3px black solid;
+width:340px;
+margin-left:240px;
+margin-top:0px;
+}
+
+
+#conteudo{
+height: 221mm; 
+border: 3px black solid;
+}
+
+
+#rodape{
+ height: 10mm;   
+ width: 800px;
+ clear: both;
+ color: #333;
+ background: #ABBEBE; 
+ padding: 0px;
+ border: 3px black solid;
+ margin-top:40px;
+}
+#data{
+ width: 90px;
+ height: 15px;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/
+ border: 3px red solid;
+ float:left;
+ font: 8pt "Arial";
+ text-align: left;
+
+}
+#pag{
+ width: 90px;
+ height: 15px;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/
+ border: 3px red solid;
+ float:right;
+ font: 8pt "Arial";
+ text-align: right;
+}

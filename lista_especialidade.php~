@@ -1,0 +1,31 @@
+<?php
+                    $estado = $_POST['estado'];
+                    
+                    $servidor	= 'localhost';
+                            $porta	= '5432';
+                            $usuario	= 'postgres';
+                            $senha	= '123456';
+                            $nomebanco	= 'agenda_medica';
+                                     
+                            $con = pg_connect("host=$servidor port=$porta dbname=$nomebanco user=$usuario password=$senha") or die ("ERRO");
+                            $sql = "SELECT especialidade FROM medico WHERE nome_med='".$estado."' ORDER BY nome ASC";
+                            $query = pg_query($sql);
+                            while($tbl = pg_fetch_object($query)){
+                            echo "<option value='".$tbl->especialidade."'>".$tbl->especialidade."</option>";
+                            } 
+                            pg_close($con);
+
+                    
+                    if(mysql_num_rows($sql) == 0){
+                            echo  '<option value="0">'.htmlentities('Nao existem produtos').'</option>';
+                    }
+                    
+                    else{
+                            while($monta = mysql_fetch_assoc($sql)){
+                                echo '<option value="'.$monta['cod_prod'].'">'.$monta['nome'].'</option>';
+                    
+                    }      
+                    
+                    }
+                    mysql_close($conexao);
+                ?>

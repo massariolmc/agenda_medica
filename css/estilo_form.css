@@ -1,0 +1,194 @@
+div {
+	width:530px;
+}
+div#agenda{
+    width:640px;
+}
+
+div#marc_hora{
+    width:640px;
+}
+div#alt_cad_consulta{
+    width:650px;
+}
+div#conteudo{/*APENAS CRIEI PARA ALINHAS OS FORMUMLARIOS*/
+margin:5px 250px 5px;/*margem superior, direita, inferior, esquerda*/
+
+}
+div#Resultado{/*APENAS CRIEI PARA ALINHAS OS FORMUMLARIOS*/
+margin:5px -100px 5px;/*margem superior, direita, inferior, esquerda}*/
+
+}
+
+
+div#rel{
+    width:650px;
+}
+a#busca{/* FORMATA APENAS O LINK DO BUSCA.PHP*/
+  padding-left: 5px;
+  color: red;
+  font-weight: bold;
+  float:right;
+  font-size:11px;
+}
+p a{/* FORMATA oOS LINKS QUE TIVEREM DENTRO DE UM "P" */
+color:black;
+text-align: center;
+font-size:12px;
+}
+
+label.error{
+                padding-left: 5px;
+                color: red;
+                font-weight: bold;
+                float:right;
+            }
+label#nprontuario{
+                padding-left: 5px;
+                color: red;
+                font-weight: bold;
+                float:right;
+                font-size:12px;
+            }
+label{/* FORMATA OS LABELS QUE NÃO ESTÃO DENTRO DO FORM */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    color:#036;
+    font-weight:bold;
+    float:left;
+    display:block;
+    width:400px;             
+}
+label#agenda{/*só usado no agenda_hora.php*/
+                width:200px; 
+            }
+            
+form label {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#036;
+    font-weight:bold;
+    float:left;
+    display:block;
+    width:150px;
+}
+label#rel{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#036;
+    font-weight:bold;
+    float:left;
+    display:block;
+    width:350px;
+}
+tr:hover{
+    background-color:darkgrey;
+   
+}
+
+form input[type="text"] {
+    background-color:#f2f2f2;
+    border:1px solid #000;
+    padding:5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+ 
+form input[type="text"]:hover {
+    background-color:#e1e1e1;
+    border:1px solid #333;
+    padding:5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+ 
+form input[type="text"]:focus {
+    background-color:#6cf;
+    border:1px solid #900;
+    padding:7px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+form input[type="password"] {
+    background-color:#f2f2f2;
+    border:1px solid #000;
+    padding:5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+ 
+form input[type="password"]:hover {
+    background-color:#e1e1e1;
+    border:1px solid #333;
+    padding:5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+ 
+form input[type="password"]:focus {
+    background-color:#6cf;
+    border:1px solid #900;
+    padding:7px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+form textarea{
+    background-color:#f2f2f2;
+    border:1px solid #000;
+    padding:5px;
+    border-radius: 10px;
+    text-align:justify;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+form textarea:focus{
+    background-color:#f2f2f2;
+    border:1px solid #000;
+    padding:5px;
+    text-align:justify;
+    font-family:Arial, Helvetica, sans-serif;	
+	
+}
+ 
+.botaoForm {
+    padding:5px;
+    background-color:#036;
+    border:1px solid #000;
+    color:#fff;
+    font-weight:bold;
+}
+ 
+.botaoForm:hover {
+    padding:5px;
+    background-color:#000;
+    border:1px solid #036;
+    color:#fff;
+    font-weight:bold;
+}
+/* CONFIGURAÇÃO PARA CAIXA DE TEXTO FORA DO FORM */
+input[type="text"] {
+    background-color:#f2f2f2;
+    border:1px solid #000;
+    padding:5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+ 
+input[type="text"]:hover {
+    background-color:#e1e1e1;
+    border:1px solid #333;
+    padding:5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+ 
+input[type="text"]:focus {
+    background-color:#6cf;
+    border:1px solid #900;
+    padding:7px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}

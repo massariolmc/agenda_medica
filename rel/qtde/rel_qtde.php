@@ -1,0 +1,74 @@
+<?php include("../../conecta.php");
+$mes = $_GET["mes"];
+$ano = $_GET["ano"];
+$i = $_GET["i"];
+include("../estilo.php");// NESSE ESTA A CONFIGURAÇÃO DO CABEÇALHO HTML E CSS        
+
+        abreconexao();       
+        $sql = "select m.nome_med as \"MEDICO\",m.cd_especialidade as \"ESPECIALIDADE\",
+                COUNT(CASE WHEN status=1 THEN 'AGENDADO' ELSE NULL END) as \"AGENDADO\",
+                COUNT(CASE WHEN status=2 THEN 'ATENDIDOS' ELSE NULL END) as \"ATENDIDOS\",
+                COUNT(CASE WHEN status=3 THEN 'CANCELADOS' ELSE NULL END) as \"CANCELADOS\",
+                COUNT(CASE WHEN status=4 THEN 'FALTAS' ELSE NULL END) as \"FALTAS\",
+                COUNT(c.crm) as \"TOTAL\"
+                FROM consultas c
+                INNER JOIN medico m  ON (c.crm=m.crm AND m.cd_especialidade=c.especialidade)
+                where Extract('Month' FROM c.dt_consulta )=$mes AND Extract('Year' FROM c.dt_consulta )=$ano
+                group by c.crm, m.cd_especialidade, m.nome_med
+                ORDER BY m.nome_med ASC";
+        $query = pg_query($sql);    
+        $cont = pg_affected_rows($query);       
+        if($cont > 0){
+        $art = array("consulta"  => array("PACIENTE","MEDICO","DATA", "HORA","CID","ESPECIALIDADE"));
+        $op = "consulta";
+        $c = 2;
+        $cores = array("#d0cbc2","#FFFFFF");          
+        $html .= "<table border='1' cellspacing='0' cellpadding='5'>
+                    
+                            <tr>
+                            <td align=center>MEDICO</td>                            
+                            <td align=center>ESPECIALIDADE</td>
+                            <td align=center>AGENDADO</td>
+                            <td align=center>ATENDIDOS</td>
+                            <td align=center>CANCELADOS</td>
+                            <td align=center>ABSENTEISMO</td>
+                            </tr>";        
+        
+        while ($res = pg_fetch_object($query)) { 
+            $index = $c % 2;
+            $c++;
+            $cor = $cores[$index];
+            
+            $html.= "<tr bgcolor=".$cor.">";
+            $html.= "<td align=center>" . utf8_encode($res->MEDICO) . "</td>";
+            $html.= "<td align=center>" . utf8_encode($res->ESPECIALIDADE) . "</td>";
+            $html.= "<td align=center>" . utf8_encode($res->AGENDADO). "</td>";            
+            $html.= "<td align=center>" . utf8_encode($res->ATENDIDOS) . "</td>";
+            $html.= "<td align=center>" . utf8_encode($res->CANCELADOS) . "</td>";    
+            $html.= "<td align=center>" . utf8_encode($res->FALTAS) . "</td>"; 
+            $html.= "</tr>";
+        }
+        $html.="</table>";
+        fechaconexao();
+        }       
+        
+         $html.= '</div>
+            
+            <div id="rodape">
+                <div id="data">
+                </div>
+                <div id="pag">
+                 </div>
+            </div>
+        
+        </div> 
+        
+    </body>
+</html>';
+         
+         
+include("../gera_pdf.php");// NESSE ARQUIVO AS CONFIGURAÇÕES DO PDF
+         
+?>
+
+        

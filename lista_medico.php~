@@ -1,0 +1,24 @@
+<?php
+                    $estado = $_POST['estado'];
+                    
+                    $servidor	= 'localhost';
+                            $porta	= '5432';
+                            $usuario	= 'postgres';
+                            $senha	= '123456';
+                            $nomebanco	= 'agenda_medica';
+                                     
+                            $con = pg_connect("host=$servidor port=$porta dbname=$nomebanco user=$usuario password=$senha") or die ("ERRO");
+                            $sql = "SELECT cd_especialidade FROM medico WHERE crm='".$estado."' ORDER BY cd_especialidade ASC";
+                            $query = pg_query($sql);
+                    
+                            if(pg_num_rows($query) == 0){
+                            echo  '<option value="0">'.htmlentities('Nao existe especialidade').'</option>';
+                            }
+                    
+                            else{
+                                while($tbl = pg_fetch_object($query)){
+                                echo "<option value='".$tbl->cd_especialidade."'>".$tbl->cd_especialidade."</option>";
+                                }                     
+                            }
+                    pg_close($con);
+                ?>

@@ -1,0 +1,16 @@
+<?php
+function conectar($sql){                        
+                            $servidor	= 'localhost';
+                            $porta	= '5432';
+                            $usuario	= 'postgres';
+                            $senha	= '123456';
+                            $nomebanco	= 'agenda_medica';
+                                     
+                            $con = pg_connect("host=$servidor port=$porta dbname=$nomebanco user=$usuario password=$senha") or die ("ERRO");
+                            //$sql = "SELECT especialidade FROM especialidade";
+                            $query = pg_query($sql);
+                            $tbl = pg_fetch_object($query)
+                            return $tbl; 
+                            pg_close($con);
+}
+                    ?> 

@@ -1,0 +1,102 @@
+
+/*especifica o corpo da pagina */
+body{
+    background:gray;
+    padding:5px;
+    
+    
+}
+/*Especifica o tamanho onde fica os links e blocos da paginas */
+div#main{
+    background:white;
+    width:1100px;
+    margin:auto;/*margem superior, direita, inferior, esquerda*/
+    padding:5px;
+   border-radius: 10px;
+}
+
+div#topo {
+ background: url(topo-eti.png) no-repeat;
+background-size:100% 100%;
+-webkit-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+-khtml-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+ overflow: auto; /* Paul O Brien Fix for IE www.pmob.co.uk */
+ width: 1100px;
+ height: 100px;/*TEM QUES ESPECIFICAR ALTURA SENÃO SOME O BANNER*/
+}
+
+div#menu{
+width: 1100px;
+height: 70px;
+}
+
+/*div#conteudo{APENAS CRIEI PARA ALINHAS OS FORMUMLARIOS
+margin:5px 250px 5px;/*margem superior, direita, inferior, esquerda
+}   DESATIVEI PARA ARRUMAR O DIV#NOTICIAS, DIV#SERVIÇOS E DIV#LOG, SE NÃO TIVESSE ELES, ESSA OPÇÃO ESTARIA ATIVADA. POREM ELA ESTA NO ESTILO_FORM.CSS PARA ALINHAR OS FORMULARIOS, SENÃO ELES FICARIAM TODOS TORTOS     */
+
+div#noticias{
+float:left;
+margin-left: 10px;
+width: 300px;
+}
+
+div#servicos{/**/
+float:left;
+margin-left: 40px;
+width: 450px;
+font-size:12px;
+border-right:2px solid wheat ;
+
+}
+div#servicos a{/**/
+color:black;
+}
+
+div#log{/**/
+float:right;
+margin-right: -55px;
+width: 320px;
+font-size:12px;
+}
+div#log a{/**/
+color:black;
+}
+
+div#rodape { 
+ width: 1100px;
+ clear: both;
+ color: #333;
+ background: white; 
+ padding: 0px;
+}
+
+.formata{
+    font-size:14px; /* define o tamanho da fonte */ 
+    font-family: Geneva, Arial, Helvetica,sans-serif;
+    color: black;
+    text-align: center;
+    background-color:white;
+    box-shadow: #000 2px 2px 1px;
+    border:2px solid #EEC591;
+    border-radius: 4px;
+    
+}
+
+h2{
+    font-size:16px; /* define o tamanho da fonte */ 
+    font-family: Geneva, Arial, Helvetica,sans-serif;
+    color: black;
+    text-align: center;
+    background-color:white;
+}
+
+p{
+color:black;
+text-align: center;
+font-size:12px;
+color:white; 
+background-color:#2E82FF;
+}
+

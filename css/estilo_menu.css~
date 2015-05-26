@@ -1,0 +1,62 @@
+div#m1{/*APENAS ALINHA O BLOCO DO MENU*/
+float:right;
+width: 405px;
+}
+
+nav#menu ul {
+    padding:5px;
+    margin:0px;
+    background-color:#EDEDED;/* cor do fundo */ 
+    list-style:none;/* retira o marcador de listas*/ 
+    width: 400px;
+    }
+
+nav#menu ul li { display: inline; }/* faz ficar um do lado do outro*/
+
+nav#menu ul li a:link,a:visited {/* configuração do link padrão e quando visitado*/
+
+      padding: 2px 10px;
+    display: inline-block;
+     
+    /* visual do link */
+    background-color:#EDEDED;
+    color: black;
+    text-decoration: none;
+    border-bottom:3px solid gray;
+    font-size:14px; /* define o tamanho da fonte */ 
+    font-family: Geneva, Arial, Helvetica,sans-serif;
+    border-left:3px solid #EEC591; /* uma barrinha a esquerda dos links */ 
+    border-radius: 10px;
+
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+}
+
+nav#menu ul li a:hover {
+    background-color:#D6D6D6;/* cor de fundo */
+    color: black;/* define a cor da fonte */ 
+    border-bottom:3px solid #EA0000;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+    }
+
+
+div#texto{
+float:left;
+width:250px;
+}
+div#texto h1{/*APENAS ALINHA O BLOCO DO TEXTO*/
+color:black;
+text-align: left;
+font-size:14px;
+text-shadow: 2px 3px 8px #1C5108;
+}

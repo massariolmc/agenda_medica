@@ -1,0 +1,28 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ALTERAR</title>
+    </head>
+    <body>
+        
+        <div id="alterar" style="width:550px";> <!- lembrar de fazer CSS -->
+        <form name="alterar" method="POST" action="processa.php">
+          <fieldset>  
+              <legend>ALTERAR AGENDAMENTO</legend>
+              <label>ESCOLHA A OPÇÃO:</label> <br>
+              <input type="radio" name="op_consulta" value="num"/>N° CAUTELA
+              <input type="radio" name="op_consulta" value="saram"/>SARAM 
+          </fieldset>  
+        </form>
+        </div>
+        
+        <?php
+        // put your code here
+        ?>
+    </body>
+</html>
